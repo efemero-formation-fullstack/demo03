@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import db from "../database/index.js";
 import {
   EmailAlreadyExistsError,

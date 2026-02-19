@@ -1,6 +1,6 @@
 import { Router } from "express";
 import authController from "../controllers/auth.controller.js";
-import { bodyValidator } from "../middlewares/body-validator.middleware.js";
+import { bodyValidator } from "../middlewares/validator.middleware.js";
 import {
   loginValidator,
   registerValidator,
