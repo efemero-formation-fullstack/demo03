@@ -1,6 +1,6 @@
 # Demo express API
 
-This is a simple project to test the creation of a REST API with express.
+This is a simple demo project to test the creation of a REST API with express. It follow a course and it is not a real project.
 
 ## Technologies used
 
@@ -9,7 +9,7 @@ This is a simple project to test the creation of a REST API with express.
 - [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript), you know it!
 - [PostgreSQL](https://www.postgresql.org/), a powerful, open source object-relational database
 
-## Dependancies
+## Dependencies
 
 ### With nix flakes (and direnv)
 
@@ -49,19 +49,21 @@ Install deno at version 2.6+
 Be sure to have PostgreSQL 17+ installed and running.
 If needed, create a database user, and the database that will contain all the application data.
 
-Copy the `.env.example` file to `.env`, then change the values in the file to
-match your database informations.
-
-The `DEV` variable in `.env` is used to clear and recreate the database at server startup. Set it to `true` when starting the development.
-
 ## Launch the project
 
-Once you have all the dependancies, go to the terminal an launch the project:
+Once you have all the dependencies, create a `.env` file and fill it with desired values. There is a `.env.example` file that can be used as a base. If you go the nix way, you can keep the values from the example file for the DB:
+```sh
+cp .env.example .env
+```
+
+Then you can launch the project:
 ```sh
 deno run dev
 ```
-The project will first download and install needed dependancies,
+
+The project will first download and install needed dependencies,
 and will launch once all is ready.
+
 It will watch for changes in the files and restart the server if needed.
 
-The server will be availaible at <http://localhost:3000> (or whatever port you put as `APP_PORT` in `.env`).
+The server will be availaible at <http://localhost:8080> (or whatever port you put as `APP_PORT` in `.env`).
